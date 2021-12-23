@@ -266,13 +266,7 @@
                             <constraint firstItem="iaw-vz-nfo" firstAttribute="leading" secondItem="1Ht-tK-9QN" secondAttribute="leading" constant="20" id="wyb-C7-VjV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="LMG-Dc-g6W">
-                        <barButtonItem key="rightBarButtonItem" title="3=&gt;" id="UY8-HH-nU7">
-                            <connections>
-                                <segue destination="8qP-IX-Zoq" kind="show" id="qHq-3K-oVY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="LMG-Dc-g6W"/>
                     <connections>
                         <outlet property="multipleStackView" destination="iaw-vz-nfo" id="Qz6-A0-Rx1"/>
                         <outlet property="questionLabel" destination="WtK-vd-E1x" id="fJM-Xg-Xer"/>
@@ -335,13 +329,20 @@
                             <constraint firstAttribute="trailing" secondItem="mAp-JE-xZe" secondAttribute="trailing" constant="20" id="dYL-NO-plT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результаты" id="HLd-ra-Qgx"/>
+                    <navigationItem key="navigationItem" title="Результаты" id="HLd-ra-Qgx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="D2M-fK-6F8">
+                            <connections>
+                                <segue destination="j3H-Ws-bKv" kind="unwind" unwindAction="unwind:" id="a41-Ut-xsd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="XHY-pp-1AM" id="75v-wx-7wG"/>
                         <outlet property="titleLabel" destination="5D7-CB-9xu" id="LxM-Vh-ify"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBw-AG-nhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="j3H-Ws-bKv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2126" y="81"/>
         </scene>
@@ -364,9 +365,6 @@
             <point key="canvasLocation" x="697.5" y="82.394366197183103"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Xu8-dh-9hE"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

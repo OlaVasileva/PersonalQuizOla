@@ -10,6 +10,6 @@ import UIKit
 class IntroViewController: UIViewController {
 
     //MARK: - IB Actions
-    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {}
+   @IBAction func unwind(_ unwindSegue: UIStoryboardSegue) { }
 
 }
