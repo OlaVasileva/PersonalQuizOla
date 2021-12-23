@@ -86,7 +86,7 @@
         <!--Вопрос №-->
         <scene sceneID="huO-Db-ddx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="xSd-cW-3E5" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="xSd-cW-3E5" customClass="QuestionViewController" customModule="PersonalQuizOla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uxn-Xv-Udn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,21 +98,33 @@
                                         <rect key="frame" x="134" y="0.0" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="xSd-cW-3E5" eventType="touchUpInside" id="ACo-UD-Dhs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rQ-Iz-ycz">
                                         <rect key="frame" x="134" y="47" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="xSd-cW-3E5" eventType="touchUpInside" id="Cft-bK-5QW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLf-QV-U3y">
                                         <rect key="frame" x="134" y="94" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="xSd-cW-3E5" eventType="touchUpInside" id="Ezy-e1-4Z6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-vF-5iK">
                                         <rect key="frame" x="134" y="141" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="xSd-cW-3E5" eventType="touchUpInside" id="Hbb-td-Y00"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -179,6 +191,9 @@
                                         <rect key="frame" x="0.0" y="220" width="335" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="xSd-cW-3E5" eventType="touchUpInside" id="oS2-5p-Rht"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -209,6 +224,9 @@
                                         <rect key="frame" x="0.0" y="132.5" width="335" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="xSd-cW-3E5" eventType="touchUpInside" id="61F-3T-NIk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -256,25 +274,26 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="multipleStackView" destination="iaw-vz-nfo" id="0Bc-qZ-IL1"/>
-                        <outlet property="questionLabel" destination="WtK-vd-E1x" id="MyA-i8-ych"/>
-                        <outlet property="rangedSlider" destination="iqB-6u-aKt" id="86x-PE-pNk"/>
-                        <outlet property="rangedStackView" destination="4TP-nL-0zo" id="f9n-ei-ERs"/>
-                        <outlet property="singleStackView" destination="fRr-jM-pe9" id="FZW-9D-Vkh"/>
-                        <outletCollection property="singleButtons" destination="UfF-S3-9oD" collectionClass="NSMutableArray" id="C6o-kN-yPD"/>
-                        <outletCollection property="singleButtons" destination="6rQ-Iz-ycz" collectionClass="NSMutableArray" id="Qgj-TB-lDR"/>
-                        <outletCollection property="singleButtons" destination="pLf-QV-U3y" collectionClass="NSMutableArray" id="WoQ-hH-5ea"/>
-                        <outletCollection property="singleButtons" destination="nIO-vF-5iK" collectionClass="NSMutableArray" id="YMo-l6-Hbl"/>
-                        <outletCollection property="multipleLabels" destination="V9C-UV-E9t" collectionClass="NSMutableArray" id="8dW-kD-ZFU"/>
-                        <outletCollection property="multipleLabels" destination="wPR-tt-ydX" collectionClass="NSMutableArray" id="suU-WK-xZh"/>
-                        <outletCollection property="multipleLabels" destination="v8n-OQ-b4A" collectionClass="NSMutableArray" id="imJ-HK-6Wa"/>
-                        <outletCollection property="multipleLabels" destination="h14-Tz-Zdg" collectionClass="NSMutableArray" id="kS0-HF-VGt"/>
-                        <outletCollection property="multipleSwitches" destination="QKb-Oy-O2R" collectionClass="NSMutableArray" id="FdX-uG-WZ1"/>
-                        <outletCollection property="multipleSwitches" destination="ZwE-fE-Ebj" collectionClass="NSMutableArray" id="PYS-ZJ-9dN"/>
-                        <outletCollection property="multipleSwitches" destination="D6A-bI-aNf" collectionClass="NSMutableArray" id="4XG-Gh-iwx"/>
-                        <outletCollection property="multipleSwitches" destination="JLx-qV-bGJ" collectionClass="NSMutableArray" id="gjA-2Q-HW8"/>
-                        <outletCollection property="rangedLabels" destination="fhx-ad-w6U" collectionClass="NSMutableArray" id="goZ-A7-JkJ"/>
-                        <outletCollection property="rangedLabels" destination="BDb-Sj-GCU" collectionClass="NSMutableArray" id="pcy-3z-nyK"/>
+                        <outlet property="multipleStackView" destination="iaw-vz-nfo" id="Qz6-A0-Rx1"/>
+                        <outlet property="questionLabel" destination="WtK-vd-E1x" id="fJM-Xg-Xer"/>
+                        <outlet property="questionProgressView" destination="YEk-fo-dcv" id="C1U-Oj-oA4"/>
+                        <outlet property="rangedSlider" destination="iqB-6u-aKt" id="BAY-DV-EF8"/>
+                        <outlet property="rangedStackView" destination="4TP-nL-0zo" id="7oP-6y-9oX"/>
+                        <outlet property="singleStackView" destination="fRr-jM-pe9" id="vku-z2-HMy"/>
+                        <outletCollection property="singleButtons" destination="UfF-S3-9oD" collectionClass="NSMutableArray" id="srH-UM-l8I"/>
+                        <outletCollection property="singleButtons" destination="6rQ-Iz-ycz" collectionClass="NSMutableArray" id="cel-2z-xA2"/>
+                        <outletCollection property="singleButtons" destination="pLf-QV-U3y" collectionClass="NSMutableArray" id="TJ1-6R-ev2"/>
+                        <outletCollection property="singleButtons" destination="nIO-vF-5iK" collectionClass="NSMutableArray" id="B41-xI-fRW"/>
+                        <outletCollection property="multipleLabels" destination="V9C-UV-E9t" collectionClass="NSMutableArray" id="VED-Ps-vCH"/>
+                        <outletCollection property="multipleLabels" destination="wPR-tt-ydX" collectionClass="NSMutableArray" id="8am-T9-FhO"/>
+                        <outletCollection property="multipleLabels" destination="v8n-OQ-b4A" collectionClass="NSMutableArray" id="04Y-yc-A6d"/>
+                        <outletCollection property="multipleLabels" destination="h14-Tz-Zdg" collectionClass="NSMutableArray" id="257-gz-cAt"/>
+                        <outletCollection property="multipleSwitches" destination="QKb-Oy-O2R" collectionClass="NSMutableArray" id="Iio-ac-aRs"/>
+                        <outletCollection property="multipleSwitches" destination="ZwE-fE-Ebj" collectionClass="NSMutableArray" id="dTv-Nq-DlG"/>
+                        <outletCollection property="multipleSwitches" destination="D6A-bI-aNf" collectionClass="NSMutableArray" id="Tup-Gm-DvV"/>
+                        <outletCollection property="multipleSwitches" destination="JLx-qV-bGJ" collectionClass="NSMutableArray" id="SSL-Yu-iKW"/>
+                        <outletCollection property="rangedLabels" destination="fhx-ad-w6U" collectionClass="NSMutableArray" id="iW1-kd-enQ"/>
+                        <outletCollection property="rangedLabels" destination="BDb-Sj-GCU" collectionClass="NSMutableArray" id="kVf-0L-vFO"/>
                         <segue destination="8qP-IX-Zoq" kind="show" identifier="showResult" id="Xu8-dh-9hE"/>
                     </connections>
                 </viewController>
@@ -285,7 +304,7 @@
         <!--Результаты-->
         <scene sceneID="RIO-VR-37W">
             <objects>
-                <viewController id="8qP-IX-Zoq" customClass="ResultViewController" sceneMemberID="viewController">
+                <viewController id="8qP-IX-Zoq" customClass="ResultViewController" customModule="PersonalQuizOla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XxM-SF-QLW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
