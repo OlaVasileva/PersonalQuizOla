@@ -11,7 +11,7 @@
         <!--Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="IntroViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroViewController" customModule="PersonalQuizOla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,9 +330,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="HLd-ra-Qgx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="D2M-fK-6F8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="of5-lY-DDI">
                             <connections>
-                                <segue destination="j3H-Ws-bKv" kind="unwind" unwindAction="unwind:" id="a41-Ut-xsd"/>
+                                <segue destination="j3H-Ws-bKv" kind="unwind" unwindAction="unwindFor:" id="DhI-OY-6O6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
